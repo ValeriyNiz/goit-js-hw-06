@@ -12,3 +12,9 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const htmlString = images.reduce((acc, image) => {
+  return acc + `<li><img class="gallery__image" src="${image.url}" alt="${image.alt}" /></li>`;
+}, '');
+
+document.querySelector('.gallery').insertAdjacentHTML('afterbegin', htmlString);
