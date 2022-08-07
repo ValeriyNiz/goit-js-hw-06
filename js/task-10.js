@@ -23,7 +23,8 @@ function createBoxes(amount) {
 
   const boxes = [];
 
-  for (let i = 0, size = 30; i < amount; i++, size += 10) {
+  let size = 30;
+  for (let i = 0; i < amount; i++, size += 10) {
     const box = document.createElement('div');
 
     box.style.height = `${size}px`;
