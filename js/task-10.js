@@ -15,6 +15,8 @@ destroyBtn.addEventListener('click', () => {
   destroyBoxes();
 });
 
+let size = 30;
+
 function createBoxes(amount) {
   if (amount > 100) {
     input.value = 100;
@@ -22,8 +24,7 @@ function createBoxes(amount) {
   }
 
   const boxes = [];
-
-  let size = 30;
+  
   for (let i = 0; i < amount; i++, size += 10) {
     const box = document.createElement('div');
 
@@ -38,5 +39,6 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
+  size = 30;
   boxWraper.innerHTML = '';
 }
